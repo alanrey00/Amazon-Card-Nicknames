@@ -1,0 +1,27 @@
+{
+  "manifest_version": 3,
+  "name": "Amazon Card Tooltip",
+  "version": "0.8",
+  "description": "Adds tooltips with names to Amazon credit card numbers.",
+  "permissions": [
+    "scripting",
+    "tabs",
+    "activeTab",
+    "storage"
+  ],
+  "background": {
+    "service_worker": "background.js"
+},
+  "content_scripts": [
+    {
+      "matches": ["*://www.amazon.com.mx/*"],
+      "js": ["content.js"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+        "resources": ["profile.css", "payments.css"],
+        "matches": ["*://www.amazon.com.mx/*"]
+    }
+]
+}

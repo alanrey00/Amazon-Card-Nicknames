@@ -1,0 +1,23 @@
+/* Always visible tooltip next to the numbers */
+.card-tooltip {
+    display: flex; /* Make sure tooltip is always visible */
+    position: relative;
+    color: black;
+    padding: 5px;
+    border-radius: 3px;
+    /* Adjust the position to be next to the number */
+    top: 0;
+    left: 100%; /* Position it to the right of the element */
+    margin-left: 10px; /* Space between the number and tooltip */
+    z-index: 100;
+    white-space: nowrap; /* Prevent tooltip text from wrapping */
+    font-size: 14px !important;
+}
+
+/* Style for the "Edit" link */
+.edit-link {
+    color: #007bff;
+    text-decoration: underline;
+    cursor: pointer;
+    margin-left: 5px;
+}
